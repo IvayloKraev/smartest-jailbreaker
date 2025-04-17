@@ -8,7 +8,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "@types/chrome": "^0.0.315"
   },
   "private": true
 }
