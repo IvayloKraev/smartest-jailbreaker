@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "SmarTest Jailbreaker",
+  "version": "0.0.1",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://www.smartest.bg/*"
+  ],
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "tabs"
+  ]
+}
