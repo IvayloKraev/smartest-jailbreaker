@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --font-ubuntu: "Ubuntu", sans-serif;
+    --color-primary: #394ca9;
+    --color-primary-dark: #404A7E;
+    --color-secondary: #1dc099;
+    --color-white: #fefeff;
+    --color-red: #ef171f;
+}
