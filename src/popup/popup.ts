@@ -30,7 +30,7 @@ function init() {
 }
 
 function setStateText(active: boolean) {
-    toggleButtonText.innerText =  state.active ? 'Active' : 'Unactive';
+    toggleButtonText.innerText =  active ? 'Active' : 'Unactive';
 }
 
 
@@ -40,4 +40,5 @@ toggleButton.addEventListener("click", (event) => {
     state.active =! state.active;
     setStateText(state.active)
     localStorage.setItem("state", JSON.stringify(state));
+
 })
