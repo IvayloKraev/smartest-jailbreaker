@@ -21,5 +21,5 @@ SmarTest Jailbreaker is a Chrome extension which lifts the restrictions of SmarT
 
 ### OR
 
-1. Download the [smartestjailbreaker.v1-0-0.zip]()
+1. Download the [smartestjailbreaker.v1-0-0.zip](https://github.com/IvayloKraev/smartest-jailbreaker/releases/tag/1.0.0)
 2. Install it in your browser.
