@@ -3,7 +3,7 @@
   "name": "SmarTest Jailbreaker",
   "version": "0.0.1",
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "index.js"
   },
   "host_permissions": [
     "https://www.smartest.bg/*"

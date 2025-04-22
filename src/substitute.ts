@@ -2,8 +2,6 @@ const baseFetch = window.fetch.bind(window)
 
 const detailsUrlPattern = /^https:\/\/api\.smartest\.bg\/api\/testSessions\/([0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12})\/details$/;
 
-let isActive = false;
-
 function getUrl(input: RequestInfo | URL): string {
     if (input instanceof Request) {
         return input.url;
@@ -12,10 +10,6 @@ function getUrl(input: RequestInfo | URL): string {
 }
 
 window.fetch = async function (input: RequestInfo | URL, init?: RequestInit): Promise<Response> {
-    if (!isActive) {
-        return baseFetch(input, init)
-    }
-
     const url = getUrl(input);
     if (!detailsUrlPattern.test(url)) {
         return baseFetch(input, init)

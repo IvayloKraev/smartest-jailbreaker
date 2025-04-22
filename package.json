@@ -6,13 +6,7 @@
   "scripts": {
     "build:typecript": "tsc",
     "build:public": "cp -r ./public/* ./dist",
-    "build:popup": "cp ./src/popup/index.html ./dist/popup",
-    "build:tailwind": "bunx @tailwindcss/cli -i ./src/popup/main.css -o ./dist/popup/main.css",
-    "build": "bun run build:typecript && bun run build:public && bun run build:popup && bun run build:tailwind"
-  },
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.4",
-    "tailwindcss": "^4.1.4"
+    "build": "bun run build:typecript && bun run build:public"
   },
   "devDependencies": {
     "typescript": "^5.5.3",
