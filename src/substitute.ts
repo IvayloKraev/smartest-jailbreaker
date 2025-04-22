@@ -1,7 +1,17 @@
 const baseFetch = window.fetch.bind(window)
 
-const detailsUrlPattern = /^https:\/\/api\.smartest\.bg\/api\/testSessions\/([0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12})\/details$/;
 const detailsUrlRegex = /^https:\/\/api\.smartest\.bg\/api\/testSessions\/[0-9A-Fa-f-]{36}\/details$/;
+
+interface Details {
+    startDate: string
+    endDate: string
+    testTitle: string
+    showResultAfterEnd: boolean
+    strictMode: boolean
+    serverTime: string
+    authenticationType: number
+    gradeFormulaType: number
+}
 
 function getUrl(input: RequestInfo | URL): string {
     if (input instanceof Request) {
@@ -18,9 +28,7 @@ window.fetch = async function (input: RequestInfo | URL, init?: RequestInit): Pr
         return response
     }
 
-    const response = await baseFetch(input, init)
-    const clone = response.clone();
-    const payload = await clone.json();
+    const payload: Details = await response.clone().json();
 
     const modifiedPayload = {
         ...payload,
