@@ -1,7 +1,15 @@
 {
   "manifest_version": 3,
   "name": "SmarTest Jailbreaker",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Jailbreaks SmarTest and exits strict mode",
+  "icons": {
+    "16": "assets/icons/16.png",
+    "32": "assets/icons/32.png",
+    "48": "assets/icons/48.png",
+    "64": "assets/icons/64.png",
+    "128": "assets/icons/128.png"
+  },
   "background": {
     "service_worker": "index.js"
   },
@@ -14,7 +22,7 @@
     "tabs"
   ],
   "action": {
-    "default_popup": "popup/index.html",
+    "default_title": "SmarTest Jailbreaker",
     "default_icon": {
       "16": "assets/icons/16.png",
       "32": "assets/icons/32.png",
@@ -22,12 +30,5 @@
       "64": "assets/icons/64.png",
       "128": "assets/icons/128.png"
     }
-  },
-  "icons": {
-    "16": "assets/icons/16.png",
-    "32": "assets/icons/32.png",
-    "48": "assets/icons/48.png",
-    "64": "assets/icons/64.png",
-    "128": "assets/icons/128.png"
   }
 }
